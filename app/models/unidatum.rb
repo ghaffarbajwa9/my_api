@@ -1,0 +1,2 @@
+class Unidatum < ApplicationRecord
+end

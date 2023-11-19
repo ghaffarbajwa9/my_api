@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  alph_two_code: MyString
+  domain: MyString
+  web_pages: MyText
+  name: MyString
+  state-province: MyString
+  country: MyString
+
+two:
+  alph_two_code: MyString
+  domain: MyString
+  web_pages: MyText
+  name: MyString
+  state-province: MyString
+  country: MyString
