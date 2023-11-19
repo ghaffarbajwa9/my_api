@@ -15,13 +15,28 @@ url = 'http://universities.hipolabs.com/search?country=United+States'
 response = HTTParty.get(url)
 data = JSON.parse(response.body)
 
-data.each do |d|
-    Unidatum.create!(
+# data.each do |d|
+#     Unidatum.create!(
+#         alph_two_code: d["alph_two_code"],
+#         domain: d["domains"][0],
+#         web_pages: d["web_pages"][0],
+#         name: d["name"],
+#         state_province: d["state-province"],
+#         country: d["country"],
+#     )
+# end
+
+#data in bulk
+
+bulk_data = data.map do |d|
+    {
         alph_two_code: d["alph_two_code"],
         domain: d["domains"][0],
         web_pages: d["web_pages"][0],
         name: d["name"],
         state_province: d["state-province"],
-        country: d["country"],
-    )
+        country: d["country"], 
+    }
 end
+
+Unidatum.insert_all(bulk_data)

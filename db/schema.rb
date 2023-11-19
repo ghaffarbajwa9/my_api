@@ -14,18 +14,6 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_19_192818) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "groups", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "pets", force: :cascade do |t|
-    t.string "image"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "unidata", force: :cascade do |t|
     t.string "alph_two_code"
     t.string "domain"
